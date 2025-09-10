@@ -19,10 +19,12 @@ public class FacebookForKeyboardAssignment {
 
 		Actions act = new Actions(driver);
 		act.sendKeys("admin").build().perform();
-		
-		act.keyDown(Keys.CONTROL).build().perform();
-		act.sendKeys("a").build().perform();
-		act.keyUp(Keys.CONTROL).build().perform();
-		
+
+//		act.keyDown(Keys.CONTROL).build().perform();
+//		act.sendKeys("a").build().perform();
+//		act.keyUp(Keys.CONTROL).build().perform();
+
+		new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+
 	}
 }
